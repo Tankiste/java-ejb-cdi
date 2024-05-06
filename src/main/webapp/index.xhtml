@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: JORDAN
+  Date: 20/04/2024
+  Time: 14:31
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Enregistrement</title>
+</h:head>
+
+<h:body>
+    <!--vue permettant de remplir le nom et le prénom d'un étudiant -->
+    <h:form>
+        nom : <h:inputText id="fname" value="#{studentModel.firstname}" />
+        prénom : <h:inputText id="name" value="#{studentModel.lastname}" />
+        <br/>
+        <h:commandButton id="auth" value="authentification >>" action="#{studentModel.addIdentity}"  />
+    </h:form>
+</h:body>
+
+</html>

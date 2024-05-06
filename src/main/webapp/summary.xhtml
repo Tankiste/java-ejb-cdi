@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: JORDAN
+  Date: 20/04/2024
+  Time: 14:51
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Résumé</title>
+</h:head>
+
+<h:body>
+    <!--vue affichant les informations personnelles de l'étudiant actuellement connecté -->
+    <h3>informations Etudiants : </h3>
+    nom : #{studentModel.lastname} <br/>
+    prénom : #{studentModel.firstname} <br/>
+    email : #{studentModel.email} <br/>
+    <h:form>
+        <h:commandButton id="create" value="enregistrer" action="#{studentModel.create}" />
+    </h:form>
+</h:body>
+
+</html>

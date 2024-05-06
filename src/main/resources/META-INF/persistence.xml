@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <!--unité de persistance pour les tests d'opérations de persistance-->
+    <persistence-unit name="bigAppPU" transaction-type="JTA">
+     <!--   <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.bookstore.business.persistence.catalog.Book</class>
+        <class>com.bookstore.business.persistence.catalog.Category</class>
+        <class>com.bookstore.business.persistence.catalog.Publisher</class>-->
+        <jta-data-source>jdbc/cesibigappDS</jta-data-source>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cesibigapp"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="admin"/>
+            <!--<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="eclipselink.canonicalmodel.subpackage" value="test"/>-->
+        </properties>
+    </persistence-unit>
+   <!-- <persistence-unit name="bsPU" transaction-type="JTA">
+        <jta-data-source>java:/MySqlDS</jta-data-source>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <shared-cache-mode>NONE</shared-cache-mode>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINEST"/>
+        </properties>
+
+    </persistence-unit>-->
+</persistence>
